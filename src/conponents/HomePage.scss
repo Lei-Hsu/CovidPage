@@ -1,0 +1,32 @@
+/* homepage */
+.container {
+  margin-top: 100px;
+  grid-column: 2/12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.countryName {
+  grid-column: 6/8;
+  text-align: center;
+  h1 {
+    font-size: 48px;
+  }
+}
+.DetailTitle {
+  grid-column: 1/13;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.DetailTitle div:nth-child(even) {
+  color: red;
+}

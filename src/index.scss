@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.App {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  min-height: 400px;
+}
+@import "./conponents/Footer.scss";
+@import "./conponents/HomePage.scss";
+@import "./conponents/Header.scss";
+@import "./conponents//Loading.scss";
