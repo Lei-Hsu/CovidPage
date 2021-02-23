@@ -1,0 +1,63 @@
+.globalData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include pad {
+    grid-column: 1/4;
+  }
+}
+.asiaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include pad {
+    grid-column: 4/7;
+  }
+}
+.europeData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include pad {
+    grid-column: 7/10;
+  }
+}
+.americaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include pad {
+    grid-column: 10/13;
+  }
+}
+.africaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include pad {
+    grid-column: 1/4;
+  }
+}
+.oceaniaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include pad {
+    grid-column: 4/7;
+  }
+}
+.colorRed {
+  color: red;
+}

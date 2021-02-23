@@ -4,14 +4,40 @@ body {
 a {
   text-decoration: none;
 }
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin pad {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin iphone {
+  @media (min-width: 568px) {
+    @content;
+  }
+}
+
+@mixin iphoneSE {
+  @media (min-width: 320px) {
+    @content;
+  }
+}
+
 .App {
   font-family: sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  min-height: 400px;
+  min-height: 500px;
+  margin-bottom: 100px;
 }
 @import "./conponents/Footer.scss";
 @import "./conponents/HomePage.scss";
 @import "./conponents/Header.scss";
 @import "./conponents//Loading.scss";
 @import "./conponents//Search.scss";
+@import "./conponents//CountryData.scss";

@@ -9,9 +9,11 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export default function App() {
-  const [data, setData] = useState("");
+  const [taiwanData, setTaiwanData] = useState("");
+  const [pending, setPending] = useState(false);
   useEffect(() => {
-    UseFetch("taiwan", setData);
+    setPending(true);
+    UseFetch("taiwan", setTaiwanData, pending, setPending);
   }, []);
   return (
     <BrowserRouter>
@@ -20,7 +22,7 @@ export default function App() {
           <div className="App">
             <Header />
             <Route exact path="/">
-              {data ? <HomePage data={data} /> : <Loading />}
+              {pending ? <Loading /> : <HomePage {...taiwanData} />}
             </Route>
             <Route path="/search">
               <Search />

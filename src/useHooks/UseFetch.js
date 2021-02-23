@@ -1,5 +1,5 @@
 import { APIKEY } from "./APIKEY.js";
-const UseFetch = (location, setData) => {
+const UseFetch = (location, setData, pending, setPending) => {
   fetch("https://covid-193.p.rapidapi.com/statistics?country=" + location, {
     method: "GET",
     headers: {
@@ -10,8 +10,9 @@ const UseFetch = (location, setData) => {
   })
     .then((res) => res.json())
     .then((data) => setData(data.response[0]))
+    .then((pending) => setPending(false))
     .catch((err) => {
-      console.error(err);
+      alert(err);
     });
 };
 

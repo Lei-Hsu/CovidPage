@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import UseFetch from "../useHooks/UseFetch";
-import { APIKEY } from "../useHooks/APIKEY.js";
+import SearchBox from "./SearchBox";
+import Loading from "./Loading";
 
 function Search() {
   const [singlecountry, setSinglecountry] = useState("");
   const [countryInfor, setCountryInfor] = useState("");
+  const [pending, setPending] = useState(false);
   const handleChange = (e) => {
     e.preventDefault();
     setSinglecountry(e.target.value);
   };
   const handleSearch = (e) => {
     e.preventDefault();
-    UseFetch(singlecountry, setCountryInfor);
+    setPending(true);
+    UseFetch(singlecountry, setCountryInfor, pending, setPending);
   };
   return (
     <div className="container">
@@ -31,30 +34,7 @@ function Search() {
           <span style={{ color: "red" }}>請輸入正確國名（英文）</span>
         </div>
       )}
-      {countryInfor && (
-        <div className="DetailTitle">
-          <div>
-            <h2>人口</h2>
-            <p>{countryInfor.population}</p>
-          </div>
-          <div>
-            <h2>確診人數</h2>
-            <p>{countryInfor.cases.total}</p>
-          </div>
-          <div>
-            <h2>死亡人數</h2>
-            <p>{countryInfor.deaths.total}</p>
-          </div>
-          <div>
-            <h2>今日增加</h2>
-            <p>{countryInfor.cases.new}</p>
-          </div>
-          <div>
-            <h2>康復人數</h2>
-            <p>{countryInfor.cases.recovered}</p>
-          </div>
-        </div>
-      )}
+      {pending ? <Loading /> : <SearchBox countryInfor={countryInfor} />}
     </div>
   );
 }

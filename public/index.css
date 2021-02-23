@@ -10,7 +10,8 @@ a {
   font-family: sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  min-height: 400px;
+  min-height: 500px;
+  margin-bottom: 100px;
 }
 
 /* footer */
@@ -40,8 +41,16 @@ a {
 }
 
 .countryName {
-  grid-column: 6/8;
-  text-align: center;
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .countryName {
+    grid-column: 6/8;
+    text-align: center;
+  }
 }
 .countryName h1 {
   font-size: 48px;
@@ -49,18 +58,31 @@ a {
 
 .DetailTitle {
   grid-column: 1/13;
-  margin-top: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .DetailTitle h2 {
   text-align: center;
 }
 .DetailTitle p {
-  text-align: right;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .DetailTitle {
+    grid-column: 1/13;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  .DetailTitle p {
+    text-align: right;
+  }
 }
 
 .DetailTitle div:nth-child(even) {
@@ -108,7 +130,7 @@ a {
 }
 
 .loading {
-  height: 100vh;
+  height: 50vh;
   grid-column: 1/13;
   display: flex;
   justify-content: center;
@@ -141,19 +163,19 @@ a {
   margin-bottom: 40px;
 }
 .searchBox input {
-  width: 30vw;
-  height: 8vh;
-  font-size: 20px;
+  width: 100vw;
+  height: 10vh;
+  font-size: 18px;
   text-align: center;
   border: none;
   border-bottom: 1px solid gray;
   outline: none;
 }
 .searchBox button {
-  width: 5vw;
-  height: 8vh;
+  width: 10vh;
+  height: 10vh;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
   color: #ffffff;
   border-radius: 10px;
   margin-left: 10px;
@@ -162,6 +184,99 @@ a {
 }
 .searchBox button :focus {
   outline: none;
+}
+@media (min-width: 768px) {
+  .searchBox input {
+    width: 30vw;
+    height: 8vh;
+    font-size: 20px;
+  }
+  .searchBox button {
+    width: 5vw;
+    height: 8vh;
+  }
+}
+
+.globalData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .globalData {
+    grid-column: 1/4;
+  }
+}
+
+.asiaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .asiaData {
+    grid-column: 4/7;
+  }
+}
+
+.europeData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .europeData {
+    grid-column: 7/10;
+  }
+}
+
+.americaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .americaData {
+    grid-column: 10/13;
+  }
+}
+
+.africaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .africaData {
+    grid-column: 1/4;
+  }
+}
+
+.oceaniaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .oceaniaData {
+    grid-column: 4/7;
+  }
+}
+
+.colorRed {
+  color: red;
 }
 
 /*# sourceMappingURL=index.css.map */
