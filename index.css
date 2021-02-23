@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  min-height: 500px;
+  margin-bottom: 100px;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ed213a;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #93291e, #ed213a);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #93291e, #ed213a);
+}
+
+/* homepage */
+.container {
+  margin-top: 100px;
+  grid-column: 2/12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.countryName {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .countryName {
+    grid-column: 6/8;
+    text-align: center;
+  }
+}
+.countryName h1 {
+  font-size: 48px;
+}
+
+.DetailTitle {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.DetailTitle h2 {
+  text-align: center;
+}
+.DetailTitle p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .DetailTitle {
+    grid-column: 1/13;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  .DetailTitle p {
+    text-align: right;
+  }
+}
+
+.DetailTitle div:nth-child(even) {
+  color: red;
+}
+
+/* header */
+.header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/13;
+  background: #ed213a;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #93291e, #ed213a);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #93291e, #ed213a);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.logo {
+  margin-left: 10px;
+}
+.logo h1 {
+  color: #ffffff;
+}
+
+.nav {
+  margin-left: auto;
+}
+.nav a {
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+  transition-duration: 250ms;
+}
+.nav a:hover {
+  color: #df8080;
+}
+
+.loading {
+  height: 50vh;
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  /* Light grey */
+  border-top: 4px solid red;
+  /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.searchBox {
+  display: flex;
+  justify-content: center;
+  grid-column: 1/13;
+  margin-bottom: 40px;
+}
+.searchBox input {
+  width: 100vw;
+  height: 10vh;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+.searchBox button {
+  width: 10vh;
+  height: 10vh;
+  border: none;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-color: red;
+  cursor: pointer;
+}
+.searchBox button :focus {
+  outline: none;
+}
+@media (min-width: 768px) {
+  .searchBox input {
+    width: 30vw;
+    height: 8vh;
+    font-size: 20px;
+  }
+  .searchBox button {
+    width: 5vw;
+    height: 8vh;
+  }
+}
+
+.globalData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .globalData {
+    grid-column: 1/4;
+  }
+}
+
+.asiaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .asiaData {
+    grid-column: 4/7;
+  }
+}
+
+.europeData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .europeData {
+    grid-column: 7/10;
+  }
+}
+
+.americaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .americaData {
+    grid-column: 10/13;
+  }
+}
+
+.africaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .africaData {
+    grid-column: 1/4;
+  }
+}
+
+.oceaniaData {
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .oceaniaData {
+    grid-column: 4/7;
+  }
+}
+
+.colorRed {
+  color: red;
+}
+
+/*# sourceMappingURL=index.css.map */
